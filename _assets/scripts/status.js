@@ -1,5 +1,6 @@
 async function getStatus() {
     let res = await fetch('https://api.lanyard.rest/v1/users/455139054464270345').then(res => res.json());
+    if (res.data.listening_to_spotify === true) nowPlaying(res);
     switch (res.data.discord_status) {
         case "dnd": {
             document.getElementById('pfp').style['box-shadow'] = "0px 0px 9px #f04747";
@@ -18,4 +19,8 @@ async function getStatus() {
             break;
         };
     }
+}
+
+async function nowPlaying(res) {
+        document.getElementById("spotify").getElementsByTagName('h2')[0].innerHTML = `<i class="fa-duotone fa-headphones"></i>&ensp;${res.data.spotify.song} by ${res.data.spotify.artist}`;
 }
