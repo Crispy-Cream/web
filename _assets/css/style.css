@@ -16,6 +16,22 @@ body {
   font-size: 15px;
 }
 
+a {
+  color: #4e4e4e;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  transition: background-size cubic-bezier(0, 0.5, 0, 1) 0.3s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  background-size: 100% 3px;
+}
+
 .centered {
   position: absolute;
   top: 50%;
