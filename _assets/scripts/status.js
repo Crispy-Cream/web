@@ -2,8 +2,8 @@ async function getStatus() {
   let res = await fetch(
     "https://api.lanyard.rest/v1/users/455139054464270345"
   ).then((res) => res.json());
-  if (res.data.listening_to_spotify === true) nowPlaying(res);
-  if (res.data.activities[0].id === "custom") CurrentStatus(res.data.activities[0]);
+  if (res.data.activities[0].id === "custom")
+    CurrentStatus(res.data.activities[0]);
   switch (res.data.discord_status) {
     case "dnd": {
       document.getElementById("pfp").style["box-shadow"] =
@@ -28,15 +28,45 @@ async function getStatus() {
   }
 }
 
-async function nowPlaying(res) {
+async function CurrentStatus(data) {
+  document
+    .getElementById("centered")
+    .getElementsByTagName(
+      "p"
+    )[0].innerHTML = `<i class="fa-duotone fa-rocket-launch"></i>&ensp;${data.state}`;
+}
+
+async function SpotifyNP() {
+  let res = await fetch("https://spotify.tysm.dev/now-playingjson").then(
+    (res) => res.json()
+  );
+
+  if (res.isPlaying === false) {
+    document
+      .getElementById("spotify")
+      .getElementsByTagName(
+        "h2"
+      )[0].innerHTML = `<i class="fa-brands fa-spotify"></i>&ensp;Nothing playing...`;
+    return;
+  }
   document
     .getElementById("spotify")
     .getElementsByTagName(
       "h2"
-    )[0].innerHTML = `<i class="fa-duotone fa-headphones"></i>&ensp;<a href="https://open.spotify.com/track/${res.data.spotify.track_id}">${res.data.spotify.song}</a> by ${res.data.spotify.artist}`;
+    )[0].innerHTML = `<i class="fa-brands fa-spotify"></i>&ensp;<a href="${res.trackurl.spotify}">${res.track}</a> by ${res.artist}`;
 }
 
-async function CurrentStatus(data) {
-  console.log(data)
-  document.getElementById("centered").getElementsByTagName("p")[0].innerHTML = `<i class="fa-duotone fa-rocket-launch"></i>&ensp;${data.state}`;
+async function consoleInformation() {
+  console.log("%c🛑STOP🛑", "font-size: 30px");
+  console.log(
+    "%cThis website was specific developed for tysm.dev only.",
+    "font-weight: bold; font-size: 30px"
+  );
+}
+
+async function Intervals() {
+  getStatus();
+  SpotifyNP();
+  consoleInformation();
+  setInterval(Intervals, 50000);
 }

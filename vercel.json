@@ -1,9 +1,9 @@
 {
-"redirects": [
+  "redirects": [
     {
-        "source": "/github",
-        "destination": "https://github.com/Crispy-Cream",
-        "permanent": true
+      "source": "/github",
+      "destination": "https://github.com/Crispy-Cream",
+      "permanent": true
     }
-]
+  ]
 }
