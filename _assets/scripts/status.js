@@ -1,4 +1,5 @@
 async function getStatus() {
+  console.log(process.env.test)
   let res = await fetch(
     "https://api.lanyard.rest/v1/users/455139054464270345"
   ).then((res) => res.json());
