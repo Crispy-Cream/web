@@ -7,7 +7,7 @@ body {
 
 .footer {
   position: fixed;
-  left: 0;
+  left: 7px;
   bottom: 0px;
   width: 100%;
   font-family: "Karla" !important;
@@ -33,10 +33,13 @@ a:focus {
 }
 
 .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
+  font-family: "Karla" !important;
+  position: absolute;
+  font-size: 15px;
+  color: #4e4e4e;
+  left: 50%;
+  top: 50%;
 }
 
 .pfp {
