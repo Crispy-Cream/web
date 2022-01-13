@@ -1,1 +1,56 @@
-body{background-color:#121212!important;padding:0;margin:0;text-align:center}.footer{position:fixed;left:7px;bottom:0;width:100%;font-family:"Karla"!important;text-align:left;color:#3b3b3b;font-size:15px}a{color:#4e4e4e;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-position:0 100%;background-repeat:no-repeat;background-size:0 3px;transition:background-size cubic-bezier(0,0.5,0,1) .3s}a:hover,a:focus{text-decoration:none;background-size:100% 3px}.centered{transform:translate(-50%,-50%);position:absolute;left:50%;top:50%}.pfp{width:150px;height:150px;border-radius:50%;background-image:url(https://cdn.discordapp.com/avatars/455139054464270345/cfbb014854b1032129c1182640f30375.webp?size=4096);background-size:cover;box-shadow:0 0 7px #b59f8e}.status{font-family:"Karla"!important;color:#4e4e4e;position:relative;right:4px}
+body {
+    background-color: #121212 !important;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .footer {
+    position: fixed;
+    left: 7px;
+    bottom: 0px;
+    width: 100%;
+    font-family: "Karla" !important;
+    text-align: left;
+    color: #3b3b3b;
+    font-size: 15px;
+  }
+  
+  a {
+    color: #4e4e4e;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+    transition: background-size cubic-bezier(0, 0.5, 0, 1) 0.3s;
+  }
+  
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    background-size: 100% 3px;
+  }
+  
+  .centered {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  
+  .pfp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url("https://cdn.discordapp.com/avatars/455139054464270345/cfbb014854b1032129c1182640f30375.webp?size=4096");
+    background-size: cover;
+    box-shadow: 0px 0px 7px #b59f8e;
+  }
+  
+  .status {
+    font-family: "Karla" !important;
+    color: #4e4e4e;
+    position: relative;
+    right: 4px;
+  }
