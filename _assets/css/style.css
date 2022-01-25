@@ -43,7 +43,7 @@ a:focus {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-image: url("https://cdn.discordapp.com/avatars/455139054464270345/cfbb014854b1032129c1182640f30375.webp?size=4096");
+  background-image: url("https://cdn.discordapp.com/avatars/455139054464270345/a72574142a992a0a35b0503b45df15d2.webp?size=4096");
   background-size: cover;
   box-shadow: 0px 0px 7px #b59f8e;
 }
@@ -51,6 +51,5 @@ a:focus {
 .status {
   font-family: "Karla" !important;
   color: #4e4e4e;
-  position: relative;
-  right: 4px;
+  position: absolute;
 }

@@ -3,6 +3,8 @@ async function getStatus() {
     "https://api.lanyard.rest/v1/users/455139054464270345"
   ).then((res) => res.json());
 
+  document.getElementById("pfp").style["background-image"] = `url("https://cdn.discordapp.com/avatars/455139054464270345/${res.data.discord_user.avatar}.png?size=4096")`;
+
   CurrentStatus(res.data.activities[0]);
 
   switch (res.data.discord_status) {
