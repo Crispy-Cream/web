@@ -1,0 +1,123 @@
+@media only screen and (max-width: 600px) {
+  .responsivefooter {
+    text-align: center;
+  }
+}
+
+body {
+  background-color: #121212 !important;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer {
+  position: fixed;
+  left: 7px;
+  bottom: 0px;
+  width: 100%;
+  font-family: "Karla" !important;
+  text-align: left;
+  color: #3b3b3b;
+  font-size: 15px;
+}
+
+a {
+  color: #4e4e4e;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  transition: background-size cubic-bezier(0, 0.5, 0, 1) 0.3s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  background-size: 100% 3px;
+}
+
+.centered {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.pfp {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url("https://cdn.discordapp.com/avatars/455139054464270345/a72574142a992a0a35b0503b45df15d2.webp?size=4096");
+  background-size: cover;
+  box-shadow: 0px 0px 7px #b59f8e;
+}
+
+.status {
+  font-family: "Karla" !important;
+  color: #4e4e4e;
+  position: absolute;
+}
+
+.navbar {
+  overflow: hidden;
+  font-family: "Karla" !important;
+  /* background-color: #333; */
+}
+
+.navbar a {
+  float: left; /* center */
+  font-size: 16px;
+  color: #4e4e4e;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+/*
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Responsiveness -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <meta content="tysm.dev" property="og:title" />
+        <meta content="Full stack developer | Mechanical and Software Engineer" property="og:description" />
+        <meta content="https://tysm.dev/" property="og:url" />
+        <meta content="#bcbbff" data-react-helmet="true" name="theme-color" />
+
+        <meta name="theme-color" content="#121212" />
+
+        <title>tysm</title>
+
+        <!-- SEO -->
+        <meta name="description" content="Crispy - Discord Bot Developer | Node.js" />
+        <meta
+            name="keywords"
+            content="crispy cream, tyhm dev, tysm.dev, dreamers network, crispy dreamers network, crispy cream discord, crispy cream discord, full-stack developer, developer, frontend developer, backend developer, system administrator, linux admin, discord bot developer, startups"
+        />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="./_assets/img/_icon/icon.png" />
+        <link rel="apple-touch-icon" href="./_assets/img/_icon/icon.png" />
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="./_assets/css/style.css" />
+
+        <link href="https://kit-pro.fontawesome.com/releases/v6.0.0-beta1/css/pro.min.css" rel="stylesheet" />
+    </head>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mohamedfrindi/Mouse.js/dist/mouse-min.js"></script>
+
+    <script src="./_assets/scripts/index.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Cloudflare Web Analytics -- > <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7cb7dde6a8b84bc5a84aa098afd71d5c"}'></script> < !-- End Cloudflare Web Analytics -->
+    
+    <body>
+        <script>
+            let mouse = new Mouse({
+                mouse: "point",
+                color: "#ffffff",
+                el: "a , button",
+                mouseHover: false,
+                mousePointer: false,
+                el_hover: true,
+                mouse_clicked: true,
+                clrChanged: false,
+            });
+            mouse.mouse();
+        </script>
+
+        <div class="navbar">
+            <!-- <a href="#">/home</a> -->
+            <a href="https://specs.tysm.dev">/specs</a>
+            <a href="github">/github</a>
+        </div>
+
+        <body onload="Intervals();SpotifyNP();"></body>
+        <div class="centered">
+            <div id="pfp" class="pfp"></div>
+            <div id="centered" class="status">
+                <p></p>
+            </div>
+        </div>
+        <div id="spotify" class="footer responsivefooter">
+            <h2><i class="fa-brands fa-spotify"></i>&ensp;Nothing playing...</h2>
+        </div>
+    </body>
+</html>
