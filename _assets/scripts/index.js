@@ -1,38 +1,3 @@
-window.onload = function() {
-  if(document.all) {
-      document.onselectstart = handleSelectAttempt;
-  }
-  document.onmousedown = handleSelectAttempt;
-}
-
-function handleSelectAttempt(e) {
-    var sender = e && e.target || window.event.srcElement;
-    if(isInForm(sender)) {
-        if (window.event) {
-            event.returnValue = false;
-        }
-        return false;
-    }
-    if (window.event) {
-        event.returnValue = true;
-    }
-    return true;
-}
-
-function isInForm = function(element) {
-    while (element.parentNode) {
-        if (element.nodeName.ToUpperCase() == 'INPUT'
-            || element.nodeName.ToUpperCase() == 'TEXTAREA') {
-            return true;
-        }
-        if (!searchFor.parentNode) {
-            return false;
-        }
-        searchFor = searchFor.parentNode;
-    }
-    return false;
-}
-
 async function getStatus() {
   let res = await fetch(
     "https://api.lanyard.rest/v1/users/455139054464270345"
