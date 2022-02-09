@@ -1,8 +1,22 @@
+@media only screen and (max-width: 600px) {
+  .responsivefooter {
+    text-align: center;
+  }
+}
+
+:root {
+  --main: #000000;
+  --txt: #3b3b3b; 
+  --links: #d2dbef;
+  --nav: #888e99;
+}
+
 body {
-  background-color: #121212 !important;
+  background-color: var(--main) !important;
   padding: 0;
   margin: 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .footer {
@@ -12,12 +26,12 @@ body {
   width: 100%;
   font-family: "Karla" !important;
   text-align: left;
-  color: #3b3b3b;
+  color: var(--nav);
   font-size: 15px;
 }
 
 a {
-  color: #4e4e4e;
+  color: var(--links);
   text-decoration: none;
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
@@ -43,14 +57,28 @@ a:focus {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-image: url("https://cdn.discordapp.com/avatars/455139054464270345/cfbb014854b1032129c1182640f30375.webp?size=4096");
+  background-image: url("https://cdn.discordapp.com/avatars/455139054464270345/a72574142a992a0a35b0503b45df15d2.webp?size=4096");
   background-size: cover;
   box-shadow: 0px 0px 7px #b59f8e;
 }
 
 .status {
   font-family: "Karla" !important;
-  color: #4e4e4e;
-  position: relative;
-  right: 4px;
+  color: var(--nav);
+  position: absolute;
+}
+
+.navbar {
+  overflow: hidden;
+  font-family: "Karla" !important;
+  /* background-color: #333; */
+}
+
+.navbar a {
+  float: left; /* center */
+  font-size: 16px;
+  color: var(--nav);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }

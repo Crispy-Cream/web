@@ -3,6 +3,10 @@ async function getStatus() {
     "https://api.lanyard.rest/v1/users/455139054464270345"
   ).then((res) => res.json());
 
+  document.getElementById("pfp").style[
+    "background-image"
+  ] = `url("https://cdn.discordapp.com/avatars/455139054464270345/${res.data.discord_user.avatar}.png?size=4096")`;
+
   CurrentStatus(res.data.activities[0]);
 
   switch (res.data.discord_status) {
@@ -54,9 +58,7 @@ async function CurrentStatus(data) {
 }
 
 async function SpotifyNP() {
-  let res = await fetch("https://spotify.tysm.dev/now-playingjson").then(
-    (res) => res.json()
-  );
+  let res = await fetch("https://spotify.tysm.dev/").then((res) => res.json());
 
   if (res.isPlaying === false) {
     document
@@ -75,12 +77,12 @@ async function SpotifyNP() {
       )[0].innerHTML = `<i class="fa-brands fa-spotify"></i>&ensp;Nothing playing...`;
     return;
   }
-  
+
   document
     .getElementById("spotify")
     .getElementsByTagName(
       "h2"
-    )[0].innerHTML = `<i class="fa-brands fa-spotify"></i>&ensp;<a href="${res.trackurl.spotify}">${res.track}</a> by ${res.artist}`;
+    )[0].innerHTML = `<i class="fa-brands fa-spotify"></i>&ensp;<a href="${res.data.trackurl.spotify}">${res.data.track}</a> by ${res.data.artist}`;
 }
 
 async function consoleInformation() {
@@ -93,7 +95,7 @@ async function consoleInformation() {
 
 async function Intervals() {
   getStatus();
-  //SpotifyNP(); ! Removed due to rate limits
+  // ? SpotifyNP(); ! Removed due to rate limits
   consoleInformation();
   setInterval(Intervals, 50000);
 }
