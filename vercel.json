@@ -1,7 +1,18 @@
 {
-   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
-    { "src": "/github", "headers": { "Location": "https://github.com/Crispy-Cream" }, "status": 307 }
-  ]
+	"routes": [{
+			"handle": "filesystem"
+		},
+		{
+			"src": "/(.*)",
+			"status": 404,
+			"dest": "/404.html"
+		},
+		{
+			"src": "/github",
+			"headers": {
+				"Location": "https://github.com/Crispy-Cream"
+			},
+			"status": 307
+		}
+	]
 }
