@@ -1,7 +1,9 @@
 {
-   "cleanUrls": true,
-   "trailingSlash": false,
-   "redirects": [
-    { "source": "/github", "destination": "https://github.com/Crispy-Cream" },
-   ]
+  "redirects": [
+    {
+      "source": "/github",
+      "destination": "https://github.com/Crispy-Cream",
+      "permanent": true
+    }
+  ]
 }
