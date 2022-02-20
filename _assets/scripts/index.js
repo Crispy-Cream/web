@@ -3,9 +3,13 @@ async function getStatus() {
     "https://api.lanyard.rest/v1/users/455139054464270345"
   ).then((res) => res.json());
 
-  document.getElementById("pfp").style[
-    "background-image"
-  ] = `url("https://cdn.discordapp.com/avatars/455139054464270345/${res.data.discord_user.avatar}.png?size=4096")`;
+  if (
+    `https://cdn.discordapp.com/avatars/455139054464270345/${res.data.discord_user.avatar}.webp?size=4096` !=
+    "https://cdn.discordapp.com/avatars/455139054464270345/74d4e3b043c3b1936144106a4c8cbf8c.webp?size=4096"
+  )
+    document.getElementById("pfp").style[
+      "background-image"
+    ] = `url("https://cdn.discordapp.com/avatars/455139054464270345/${res.data.discord_user.avatar}.webp?size=4096")`;
 
   CurrentStatus(res.data.activities[0]);
 
