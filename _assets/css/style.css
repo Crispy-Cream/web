@@ -4,6 +4,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --main: #0a0a0a;
   --txt: #878683;
