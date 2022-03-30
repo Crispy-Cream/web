@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <meta content="tysm.dev 404" property="og:title" />
+        <meta content="Full stack developer | Mechanical and Software Engineer" property="og:description" />
+        <meta content="https://specs.tysm.dev/" property="og:url" />
+
+        <meta name="description" content="Crispy - Discord Bot Developer | Node.js" />
+        <meta
+            name="keywords"
+            content="crispy cream, tyhm dev, tysm.dev, dreamers network, crispy dreamers network, crispy cream discord, crispy cream discord, full-stack developer, developer, frontend developer, backend developer, system administrator, linux admin, discord bot developer, startups, specs, tysm specs, tysm.dev specs, specs tysm.dev"
+        />
+
+        <title>404</title>
+
+        <style>
+            body {
+                background: #081421;
+                color: #d3d7de;
+                font-family: "Courier new";
+                font-size: 18px;
+                line-height: 1.5em;
+                cursor: default;
+                overflow: hidden;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                background-image: linear-gradient(currentColor, currentColor);
+                background-position: 0% 100%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size cubic-bezier(0, 0.5, 0, 1) 0.3s;
+            }
+
+            a:hover,
+            a:focus {
+                text-decoration: none;
+                background-size: 100% 2px;
+            }
+
+            .code {
+                position: absolute;
+                width: 390px;
+                min-width: 320px;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+            .code > span {
+                display: block;
+            }
+
+            @media screen and (max-width: 320px) {
+                .code {
+                    font-size: 5vw;
+                    min-width: auto;
+                    width: 95%;
+                    margin: auto;
+                    padding: 5px;
+                    padding-left: 10px;
+                    line-height: 6.5vw;
+                }
+            }
+        </style>
+
+        <link rel="shortcut icon" href="./_assets/img/_icon/icon.png" />
+        <link rel="apple-touch-icon" href="./_assets/img/_icon/icon.png" />
+    </head>
+    <body>
+        <div class="code">
+            <span>
+                <span style="color: #c46dd4;" id="1"> if </span><span id="2">(</span><span style="font-style: italic; color: #d65562;" id="3">error</span><span style="color: #4ca8ef;" id="4"> === </span>
+                <span style="color: #d8955c;" id="5">404</span><span id="6">) {</span>
+            </span>
+
+            <span>
+                <span style="width: 10px; padding-left: 15px; color: #ebbd70;" id="7">console</span><span id="8">.</span><span style="font-style: italic; color: #3fb0f3;" id="9">error</span><span id="10">(</span><span style="color: #88c06e;" id="11">"Page not found!"</span><span id="12">);</span>
+            </span>
+
+            <span>
+                <span style="display: block;" id="13">}</span>
+                <span style="color: #7e848f; font-style: italic;" id="14">// Go </span><span><a href="javascript:history.back()" id="15">Back</a></span><span style="color: #7e848f; font-style: italic;" id="16"> or </span>
+                <span><a href="/" id="17">Home</a></span><span style="color: #7e848f; font-style: italic;" id="18">!</span>
+            </span>
+        </div>
+
+        <script>
+            function typeEffect(ElementArray, speed) {
+                var element = document.getElementById(ElementArray.element);
+
+                element.display = "block";
+
+                var text = ElementArray.innerHTML;
+
+                var i = 0;
+                var num = parseInt(ElementArray.element);
+                var max = elements.length;
+                var timer = setInterval(function () {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(timer);
+                        if (num < max) {
+                            typeEffect(elements[num], speed);
+                        }
+                    }
+                }, speed);
+            }
+
+            var elements = [];
+            var i = 0;
+            for (i = 0; i < 18; i++) {
+                var num = (i + 1).toString();
+                var element = document.getElementById(num);
+                elements.push({
+                    element: num,
+                    innerHTML: element.innerHTML,
+                });
+                element.innerHTML = "";
+            }
+
+            typeEffect(elements[0], 75);
+        </script>
+    </body>
+</html>
