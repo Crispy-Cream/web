@@ -2,6 +2,6 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/github", "status": 307, "dest": "https://github.com/Crispy-Cream" },
-    { "src": "/(.*)", "status": 404, "dest": "/404.html" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
