@@ -94,8 +94,7 @@ async function consoleInformation() {
 }
 
 async function Intervals() {
-  getStatus();
   SpotifyNP();
-  consoleInformation();
-  setInterval(Intervals, 50000);
+  getStatus();
+  setInterval(Intervals, 60000);
 }
