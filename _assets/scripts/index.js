@@ -58,7 +58,7 @@ async function CurrentStatus(data) {
 }
 
 async function SpotifyNP() {
-  let res = await fetch("https://spotify.tysm.dev/").then((res) => res.json());
+  let res = await fetch("https://spotify.tysm.dev/now-playing").then((res) => res.json());
 
   if (res.isPlaying === false) {
     document
@@ -82,7 +82,7 @@ async function SpotifyNP() {
     .getElementById("spotify")
     .getElementsByTagName(
       "h2"
-    )[0].innerHTML = `<i class="fa-brands fa-spotify"></i>&ensp;<a href="${res.data.trackurl.spotify}">${res.data.track}</a> by ${res.data.artist}`;
+    )[0].innerHTML = `<i class="fa-brands fa-spotify"></i>&ensp;<a href="${res.data.trackurl}">${res.data.track}</a> by ${res.data.artist}`;
 }
 
 async function consoleInformation() {
